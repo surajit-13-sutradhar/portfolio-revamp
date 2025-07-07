@@ -10,14 +10,22 @@ const app = express();
 
 
 app.use(express.json());
-app.use(cors({
-    origin: [
-        'http://localhost:5173',
-        'https://portfolio-revamp-frntd.vercel.app', // Frontend domain
-        'https://portfolio-revamp-gamma-henna.vercel.app',  // Backend domain (optional, for testing)
-        'https://localhost:5000'
-    ]
-}));
+
+const corsOptions = {
+    origin: ["https://portfolio-revamp-frntd-k0aei26pu-surajit-sutradhars-projects.vercel.app"],
+    credentials: true
+}
+
+app.use(cors(corsOptions))
+
+// app.use(cors({
+//     origin: [
+//         'http://localhost:5173',
+//         'https://portfolio-revamp-frntd.vercel.app', // Frontend domain
+//         'https://portfolio-revamp-gamma-henna.vercel.app',  // Backend domain (optional, for testing)
+//         'https://localhost:5000'
+//     ]
+// }));
 
 // connect with MongoDb
 connectDB();
