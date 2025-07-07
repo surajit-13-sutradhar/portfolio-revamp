@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-    origin: ["https://portfolio-revamp-frntd-k0aei26pu-surajit-sutradhars-projects.vercel.app"],
+    origin: ["https://portfolio-revamp-frntd-k0aei26pu-surajit-sutradhars-projects.vercel.app", "https://localhost:5173"],
     credentials: true
 }
 
