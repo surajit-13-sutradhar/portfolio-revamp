@@ -4,7 +4,6 @@ import BlogList from "./pages/blogs/BlogList";
 import BlogPage from "./pages/blogs/BlogPage";
 import ProjectList from "./pages/projects/ProjectList";
 
-
 function App() {
     return (
         <Routes>

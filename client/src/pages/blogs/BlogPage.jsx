@@ -8,7 +8,7 @@ export default function BlogPage() {
     const [blog, setBlog] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/blogs/${slug}`)
+        fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/blogs/${slug}`)
         .then(res => res.json())
         .then(setBlog);
     }, [slug]);
