@@ -8,6 +8,8 @@ import projectRoutes from "./routes/projectRoutes.js";
 dotenv.config();
 const app = express();
 
+
+app.use(express.json());
 app.use(cors({
     origin: [
         'http://localhost:5173',
@@ -16,8 +18,6 @@ app.use(cors({
         'https://localhost:5000'
     ]
 }));
-
-app.use(express.json());
 
 // connect with MongoDb
 connectDB();
