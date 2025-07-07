@@ -12,7 +12,7 @@ app.use(cors({
     origin: [
         'http://localhost:5173',
         'https://portfolio-revamp-frntd.vercel.app', // Frontend domain
-        'portfolio-revamp-gamma-henna.vercel.app',  // Backend domain (optional, for testing)
+        'https://portfolio-revamp-gamma-henna.vercel.app',  // Backend domain (optional, for testing)
         'https://localhost:5000'
     ]
 }));
