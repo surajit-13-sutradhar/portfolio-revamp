@@ -23,11 +23,11 @@ export default function BlogPage() {
         <Markdown class="prose lg:prose-xl">
             {markdown}
         </Markdown>
-        {blog.image && (
+        {blog.bannerImage && (
             <img
-            src={blog.image}
+            src={blog.bannerImage}
             alt={blog.title}
-            style={{ width: "100%", maxHeight: 400, objectFit: "cover", marginBottom: "1rem" }}
+            style={{ width: "80%", maxHeight: 400, objectFit: "cover", marginBottom: "1rem" }}
             />
         )}
         </div>

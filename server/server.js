@@ -10,8 +10,10 @@ const app = express();
 
 app.use(cors({
     origin: [
+        'http://localhost:5173',
         'https://portfolio-revamp-s4sz.vercel.app', // Frontend domain
-        'https://portfolio-revamp-six.vercel.app'  // Backend domain (optional, for testing)
+        'https://portfolio-revamp-six.vercel.app',  // Backend domain (optional, for testing)
+        'https://localhost:5000'
     ]
 }));
 
@@ -25,3 +27,6 @@ app.use("/api/projects", projectRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, ()=> console.log(`Server running on port ${PORT}`));
+
+// export default app;
+
