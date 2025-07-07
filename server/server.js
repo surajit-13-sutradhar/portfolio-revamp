@@ -7,7 +7,9 @@ import projectRoutes from "./routes/projectRoutes.js";
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://portfolio-revamp-s4sz.vercel.app' // Allow only this origin
+}));
 app.use(express.json());
 
 // connect with MongoDb
