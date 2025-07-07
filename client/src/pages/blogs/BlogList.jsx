@@ -5,7 +5,7 @@ const BlogList = () => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        fetch("${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/blogs")
+        fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/blogs`)
             .then(res => res.json())
             .then(setBlogs);
     }, []);
