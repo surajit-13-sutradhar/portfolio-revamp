@@ -7,11 +7,12 @@ import projectRoutes from "./routes/projectRoutes.js";
 
 dotenv.config();
 const app = express();
+
 app.use(cors({
-  origin: [
-    'https://portfolio-revamp-s4sz.vercel.app', // Frontend domain
-    'https://portfolio-revamp-six.vercel.app'  // Backend domain (optional, for testing)
-  ]
+    origin: [
+        'https://portfolio-revamp-s4sz.vercel.app/', // Frontend domain
+        'https://portfolio-revamp-six.vercel.app/'  // Backend domain (optional, for testing)
+    ]
 }));
 
 app.use(express.json());

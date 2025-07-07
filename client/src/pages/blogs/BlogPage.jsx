@@ -13,7 +13,7 @@ export default function BlogPage() {
         .then(setBlog);
     }, [slug]);
 
-    if (!blog) return <div style={{ padding: "2rem" }}>Loading...</div>;
+    if (!blog) return <div>Loading...</div>;
 
     const markdown = blog.content
 
