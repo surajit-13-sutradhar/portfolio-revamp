@@ -2,12 +2,20 @@ import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import Markdown from 'markdown-to-jsx'
 // import ReactMarkdown from "react-markdown";
+import { getBlog, setBlog } from "./BlogCache";
 
 export default function BlogPage() {
     const { slug } = useParams();
-    const [blog, setBlog] = useState(null);
+    const [blog, setBlog] = useState(() => getBlog(slug));
 
     useEffect(() => {
+        // if the blog exists in cache, directly return from there
+        const cached = getBlog(slug);
+        if (cached) {
+            setBlog(cached);
+            return;
+        }
+        // else, fetch from database
         fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/blogs/${slug}`)
         .then(res => res.json())
         .then(setBlog);
